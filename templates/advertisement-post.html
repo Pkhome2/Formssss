@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% load static %}
+{% block title %}advertisement-post{% endblock %}
+</head>
+
+<body>
+{% block advertisement-post %}"nav-link active"{% endblock %}
+
+{% block content %}
+  <div class="row">
+    <div class="col" style="margin: 50px;">
+      <div class="display-6">
+        <span class="badge bg-primary">Сообщите миру об этом в этой форме</span>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <form method="post" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="row mb-3">
+        <div class="col-6">
+          {{ form.as_p}}
+          <!- развёртываем форму в виде тегов p. Так же можно использоватеь as_table или as_ul -->
+        </div>>
+        <div class="row mb-3 offset-sm-3">
+          <div class="col-1">
+            <button type="submit class="btn btn-succsess">Принять</button>
+          </div>
+        </div>
+    </form>
+  </div>
+  {% endblock %}
+
+<footer style="padding: 100px;" class="bg-primary">
+  </footer>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+  {% load static %}
+
+{% block title %}profile{% endblock %}
+</head>
+
+<body>
+  {% block profile %}"nav-link active"{% endblock %}
+
+{% block content %}
+<div class="col" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Сейчас вы находитесь на сайте под ником "username".</span>
+  </div>
+</div>
+{% endblock %}
+<footer style="padding: 100px;" class="bg-primary">
+  </footer>
+
+</body>
+</html>
